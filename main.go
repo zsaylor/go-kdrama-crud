@@ -108,11 +108,11 @@ func main() {
 		Director: &Director{Firstname: "Hyun-tak", Lastname: "Jo"}})
 
 	// Define API endpoints & set their functions
-	r.HandleFunc("api/v1/dramas", getDramas).Methods("GET")
-	r.HandleFunc("api/v1/dramas/{id}", getDrama).Methods("GET")
-	r.HandleFunc("api/v1/dramas", createDrama).Methods("POST")
-	r.HandleFunc("api/v1/dramas/{id}", updateDrama).Methods("PUT")
-	r.HandleFunc("api/v1/dramas/{id}", deleteDrama).Methods("DELETE")
+	r.HandleFunc("/api/v1/dramas", getDramas).Methods("GET")
+	r.HandleFunc("/api/v1/dramas/{id}", getDrama).Methods("GET")
+	r.HandleFunc("/api/v1/dramas", createDrama).Methods("POST")
+	r.HandleFunc("/api/v1/dramas/{id}", updateDrama).Methods("PUT")
+	r.HandleFunc("/api/v1/dramas/{id}", deleteDrama).Methods("DELETE")
 
 	// Start server on port 8000 and catch any fatal errors
 	fmt.Printf("Starting server at port 8000...\n")
