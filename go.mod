@@ -1,4 +1,4 @@
-module go-movies-crud
+module go-kdrama-crud
 
 go 1.17
 
